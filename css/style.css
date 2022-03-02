@@ -1,0 +1,29 @@
+:root {
+    --header-height: 4rem;
+    --footer-height: 3rem;
+}
+body {
+    height: 100vh;
+}
+
+.header {
+    height: var(--header-height);
+}
+
+#level{
+    width: 30%;
+}
+
+.custom-btn{
+    width: 20%;
+    background-color: lightgrey;
+}
+
+main {
+    height: calc(100% - var(--header-height) - var(--footer-height));
+    background-color: lightgreen;
+}
+
+.footer {
+    height: var(--footer-height);
+}
