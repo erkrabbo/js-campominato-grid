@@ -24,6 +24,22 @@ main {
     background-color: lightgreen;
 }
 
+.main{
+    height: 100%;
+}
 .footer {
     height: var(--footer-height);
+}
+
+
+/* UTILITY */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    width: 10%;
+    height: 10%;
 }
