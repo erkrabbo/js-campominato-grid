@@ -41,5 +41,6 @@ main {
 
     border: 2px solid black;
     width: 10%;
-    height: 10%;
+
+    max-width: 50px;
 }
