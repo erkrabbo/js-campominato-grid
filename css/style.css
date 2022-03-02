@@ -22,6 +22,8 @@ body {
 main {
     height: calc(100% - var(--header-height) - var(--footer-height));
     background-color: lightgreen;
+
+    overflow-y: auto;
 }
 
 .main{
