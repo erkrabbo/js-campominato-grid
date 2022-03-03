@@ -2,6 +2,7 @@ const btnPlay = document.getElementById('btnPlay');
 
 const gridSpaceContainer = document.body.querySelector('#gridSpaceContainer');
 const difficultySelector = document.body.querySelector('#level');
+let boxes = document.querySelectorAll('.box');
 
 let areThereElements = false;
 let blockNumber = 0;
@@ -50,11 +51,12 @@ function createGrid(){
         gridSpace.append(block);
     }
 
+    boxes = document.querySelectorAll('.box');
+
     squareBoxes();
 }
 
 function squareBoxes(){
-    const boxes = document.querySelectorAll('.box');
     const elementBox = document.querySelector('.box');
 
     const width = elementBox.offsetWidth;
@@ -63,7 +65,12 @@ function squareBoxes(){
 
     for (i=0; i<boxes.length; i++){
         boxes[i].setAttribute('style', `height: ${width}px`);
+        boxes[i].addEventListener('click', stepOnIt)
     }
+}
+
+function stepOnIt(){
+    this.classList.add('clicked');
 }
 
 

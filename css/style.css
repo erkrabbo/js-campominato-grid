@@ -69,6 +69,15 @@ main {
     max-width: 50px;
 }
 
+.box:hover{
+    cursor: pointer;
+}
+
+.box.clicked{
+    background-color: blue;
+    color: white;
+}
+
 
 /*      MEDIA     */
 
