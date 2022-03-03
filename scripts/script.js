@@ -43,35 +43,33 @@ function createGrid(){
         let block = document.createElement('div');
         block.classList.add('box');
         block.innerHTML = `<span>${i}</span>`
-        if (i % 10 == 1){
-            let separator = document.createElement('div');
-            separator.classList.add('w-100');
-            gridSpace.append(separator);
-        }
+
         gridSpace.append(block);
     }
 
-    boxes = document.querySelectorAll('.box');
+    
 
     squareBoxes();
 }
 
 function squareBoxes(){
-    const elementBox = document.querySelector('.box');
+    const playGrid = document.querySelector('#gridSpace');
+    const boxes = document.querySelectorAll('.box');
 
-    const width = elementBox.offsetWidth;
-
-    console.log(width)
+    playGrid.style.height = `${playGrid.offsetWidth}px`;
 
     for (i=0; i<boxes.length; i++){
-        boxes[i].setAttribute('style', `height: ${width}px`);
-        boxes[i].addEventListener('click', stepOnIt)
+        boxes[i].style.width = `calc(100% / ${Math.sqrt(blockNumber)}`;
+        boxes[i].style.height =`${boxes[i].style.width}`;
+        console.log(boxes[i].style.width);
+        boxes[i].addEventListener('click', stepOnIt);
     }
 }
 
 function stepOnIt(){
     this.classList.add('clicked');
 }
+
 
 
      
