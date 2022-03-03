@@ -8,7 +8,6 @@ let blockNumber = 0;
 
 window.addEventListener('resize', squareBoxes)
 window.addEventListener('load', createGrid)
-
 btnPlay.addEventListener('click', createGrid);
 
 function createGrid(){
@@ -19,14 +18,16 @@ function createGrid(){
     
     switch (difficultySelector.value){
         case '0':
-            blockNumber =100
+            blockNumber =100;
             break;
         case '1':
-            blockNumber = 81
+            blockNumber = 81;
             break;
         case '2':
-            blockNumber = 49
+            blockNumber = 49;
             break;
+        default:
+            blockNumber = 100;
     }
     
     let gridSpace = document.createElement('div');
@@ -50,7 +51,6 @@ function createGrid(){
     }
 
     squareBoxes();
-    
 }
 
 function squareBoxes(){
